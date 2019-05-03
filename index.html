@@ -13,210 +13,702 @@
 
 <header id="intro" class="slide">
 	<h1>
-		Inspire.js
+		Lo&nbsp;nuevo de&nbsp;CSS
 	</h1>
 	<h2>
-		Lean,&nbsp;hackable,&nbsp;extensible slide&nbsp;deck&nbsp;framework
+		Qué&nbsp;está&nbsp;por&nbsp;venir&nbsp;y&nbsp;qué&nbsp;ha&nbsp;llegado&nbsp;ya
 	</h2>
-	<p class="attribution">By <a href="http://lea.verou.me">Lea Verou</a> and <a href="https://github.com/LeaVerou/inspire.js/graphs/contributors">contributors</a></p>
 </header>
+
 <section>
 	<header class="slide">
-		<h1>Introduction</h1>
+		<h2>Sonia Ruiz</h2>
+		<p>Frontend Developer en Secuoyas</p>
+		<p>@Yune__vk</p>
+	</header>
+</section>
+
+<section>
+	<header class="slide">
+		<h1>Lo nuevo de CSS</h1>
 	</header>
 
-	<article class="slide" title="Inspire.js: Introduction">
-		<h1>Main idea</h1>
-
-		<ul class="delayed-children">
-			<li>An HTML file contains the whole presentation</li>
-			<li>Themes as CSS files</li>
-			<li>Plugins for extra functionality, autoloaded when used</li>
-			<li>Nice JavaScript API for really custom things</li>
-		</ul>
-	</article>
-
-	<article class="slide">
-		<h1>History</h1>
-		<ul>
-			<li>Originally created in 2010 for my first talk, at <a href="http://front-trends.com">Front Trends 2010</a></li>
-			<li>By popular demand, it was released shortly after, named CSSS</li>
-			<li>Huge refactor and renaming to Inspire.js in Sep 2018</li>
-		</ul>
-	</article>
-
-	<article class="slide">
-		<h1>Syntax</h1>
-
-		<ul>
-			<li>Slides are defined by adding the <code>slide</code> class to any elements.</li>
-			<li><code>&lt;header class="slide"></code> is a header slide (relevant for the <a href="#overview">Overview</a>)</li>
-		</ul>
-	</article>
-
-	<article class="slide" id="navigation">
-		<h1>Keyboard Navigation</h1>
-		<ul>
-			<li><kbd>→</kbd> or <kbd>↓</kbd> to advance to the next slide or incrementally displayed item</li>
-			<li><kbd>←</kbd> or <kbd>↑</kbd> to go to the previous slide or incrementally displayed item</li>
-			<li><kbd>Ctrl</kbd><kbd>→</kbd> or <kbd>Ctrl</kbd><kbd>↓</kbd> to jump to the next slide</li>
-			<li><kbd>Ctrl</kbd><kbd>←</kbd> or <kbd>Ctrl</kbd><kbd>↑</kbd> to jump to the previous slide</li>
-			<li>Home to go to the first slide, End to go to the last</li>
-			<li><kbd>Ctrl</kbd><kbd>G</kbd> to jump to an arbitrary slide (by slide number or identifier)</li>
-		</ul>
+	<article class="slide iframe dont-resize onscreen-nav mv-target-within" data-index="6">
+		<iframe data-src="https://caniuse.com/" src="https://caniuse.com/"></iframe>
+		<h1><a href="https://caniuse.com/" target="_blank">caniuse.com</a></h1>
 	</article>
 </section>
 
 <section>
 	<header class="slide">
-		<h1>Features</h1>
+		<h1>Variables</h1>
 	</header>
 
-	<article class="slide" id="data-insert">
-		<h1>Repeated slides</h1>
+	<article class="slide" id="demo-variable">
+			<pre class="language-css"><code>:root { /* Es igual a html {...} */
+	var-primarycolor: teal;
+	var-secondarycolor: blue;
+}
 
-		<ul>
-			<li>Use attribute <code>data-insert="#id"</code> on an empty slide to re-insert it later in the slideshow</li>
-			<li>Notice how this slide will also be re-inserted after the next one!</li>
-		</ul>
+h1 {
+	color: var(primary-color);
+}
+
+button {
+	background-color: var(primary-color);
+}</code></pre>
 	</article>
 
-	<article class="slide">
-		<h1>IDs and titles</h1>
-		<ul>
-			<li>IDs are dynamically assigned by JavaScript, but you can also use your own</li>
-			<li>Slide titles (used in the browser tab when the slide is active, and in the <a href="#overview">Overview</a>) via the <code>title</code> or <code>data-title</code> attributes or headings in the slide.</li>
-			<li>If only an id or only a title is provided, the other is extracted from it.</li>
-		</ul>
-	</article>
-
-	<article class="slide" data-insert="#data-insert"></article>
-
-	<article class="slide">
-		<h1>Incremental display</h1>
-
-		<ul class="delayed-children">
-			<li>Incremental display of slide contents (just add <code>class="delayed"</code>)</li>
-			<li>Use selector <code>.delayed:not(.current):not(.displayed)</code> to change the style of undisplayed items</li>
-			<li>Use selector <code>.delayed.displayed</code> to change the style of displayed items</li>
-			<li>Use selector <code>.delayed.current</code> to change the style of current items</li>
-			<li>Use <code>class="delayed-children"</code> to apply the <code>delayed</code> class to all of an element’s children</li>
-			<li>
-				Nested delayed items <strong class="delayed">are possible</strong>!
-			</li>
-		</ul>
-	</article>
+	<header class="slide back-cover">
+		<h1>Variables</h1>
+		<h2 class="delayed">90%</h2>
+	</header>
 </section>
 
 <section>
 	<header class="slide">
-		<h1>Plugins</h1>
+		<h1>calc()</h1>
 	</header>
 
-	<article class="slide" id="overview">
-		<h1>Overview</h1>
-
-		<ul>
-			<li>Loaded automatically, use <code>&lt;code class="no-overview"></code> to prevent this.</li>
-			<li>Press <kbd>Ctrl</kbd>+<kbd>H</kbd> (or <kbd>Shift</kbd>+<kbd>H</kbd>) to trigger, <kbd>Esc</kbd> to close.</li>
-			<li class="delayed">Cool, huh? You can press <kbd>Ctrl</kbd><kbd>Shift</kbd><kbd>H</kbd> to see all slides</li>
-		</ul>
-	</article>
-
-	<article class="slide">
-		<h1>Syntax highlighting with PrismJS</h1>
-
-		<ul>
-			<li>Autoloads core & languages used</li>
-			<li>Load plugins by listing their ids in a <code>data-prism-plugins</code> attribute, on any element (first one will be used).</li>
-			<li>Automatically figures out dependencies & aliases</li>
-			<li>CSS is up to you!</li>
-		</ul>
-		<pre class="language-jsx"><code>var start = new Date().getTime();
-setInterval(function() {
-	React.render(
-		&lt;ExampleApplication elapsed={new Date().getTime() - start} />,
-		document.getElementById('container')
-	);
-}, 50);</code></pre>
-	</article>
-
-	<article class="slide" data-video="https://mavo.io/demos/eshop/video.mp4" style="--url: 'https://mavo.io/demos/eshop'" id="media-plugin">
-		<div>
-			<h1>Annotated videos</h1>
-			<ul>
-				<li><code>data-video</code> for URL</li>
-				<li><code>class="annotation"</code> for annotations</li>
-				<li><code>data-time</code> and <code>data-pause</code> on annotations</li>
-			</ul>
-		</div>
-		<span class="annotation top-pointer" style="top: 44%; left: 59.5%; --pointer-left: 4em;" data-time="3000 to 3500" data-pause>Click to dismiss & resume</span>
-		<span class="annotation top-pointer" style="top: 26%; left: 67.1%" data-time="5200 to 5700" data-pause="2000">Auto-resume after 2sec</span>
-	</article>
-
-	<article class="demo slide" id="livedemo">
-		<textarea class="language-html"><p>Live demo!</p></textarea>
+	<article class="demo slide" id="demo-calc">
 		<textarea class="language-css">
-			p {
-				font-size: 250%;
-				color: #f06;
+			div {
+				background: url('/img/emoji.jpg')
+					100% 100% no-repeat;
+				background-size: 50%;	
 			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			div {
+				background-color: #fafafa;
+				width: 20rem;
+				height: 20rem;
+			}
+		</textarea>
+		<textarea class="language-html"><div></div></textarea>
+	</article>
+
+	<header class="slide back-cover">
+		<h1>calc()</h1>
+		<h2 class="delayed">90%</h2>
+	</header>
+</section>
+
+<section>
+	<header class="slide">
+		<h1>Conic Gradients</h1>
+	</header>
+
+	<article class="demo slide" id="demo-conic">
+		<textarea class="language-css">
+			div {
+				background:
+					conic-gradient(red, orange);
+			}
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			div {
+				background-color: #fafafa;
+				width: 20rem;
+				height: 20rem;
+			}
+		</textarea>
+		<textarea class="language-html"><div></div></textarea>
+	</article>
+
+	<header class="slide back-cover">
+		<h1>Conic Gradients</h1>
+		<h2 class="delayed">90%</h2>
+	</header>
+</section>
+
+<section>
+	<header class="slide">
+		<h1>Media Queries Nivel 4</h1>
+	</header>
+
+	<article class="slide">
+		<h1>Detect Pointer Type</h1>
+
+		<pre class="language-css"><code>@media (pointer:coarse) {
+	/* CSS rules for touch screen */
+}
+
+@media (hover) {
+	/* CSS rules useful to people with
+	devices that have hover support */
+}</code></pre>
+	</article>
+
+	<article class="slide">
+		<h1>Nueva sintaxis</h1>
+
+		<pre class="language-css"><code>@media (min-width: 40em) and (max-width: 59em) {
+	/* CSS rules for screen sizes 
+	between 40em and 59em */
+}
+
+@media (40em <= width <= 59em ) {
+	/* CSS rules for screen sizes 
+	between 40em and 59em */
+}</code></pre>
+	</article>
+
+	<header class="slide back-cover">
+		<h1>Media Queries Nivel 4<br><span>Detect Point Type & nueva sintaxis</span></h1>
+		
+		<h2 class="delayed">90%</h2>
+	</header>
+</section>
+
+<section>
+	<header class="slide">
+		<h1>Grid</h1>
+	</header>
+
+	<article class="demo slide" id="demo-grid">
+		<textarea class="language-css">
+				.container {	
+					display: grid;
+					grid-template-columns: repeat(6, 1fr);
+					grid-template-rows: repeat(4, 1fr);
+				}
+				
+				.container > div:nth-child(1) {
+					background-color: #1E88E5;
+					grid-column: 1 / span 3;
+				}
+				
+				.container > div:nth-child(2) {
+					background-color: #E91E63;
+				}
+				
+				.container > div:nth-child(3) {
+					background-color: #00BCD4;
+					grid-column: 5 / span 6;
+					grid-row: 1 / span 4;
+				}
+				
+				.container > div:nth-child(4) {
+					background-color: #FF9800;
+					grid-column: 1 / span 2;
+					grid-row: 2 / span 2;
+				}
+				
+				.container > div:nth-child(5) {
+					background-color: #9E9E9E;
+					grid-column: 3 / span 2;
+				}
+				
+				.container > div:nth-child(6) {
+					background-color: #43A047;
+				}
+				
+				.container > div:nth-child(7) {
+					background-color: #F44336;
+				}
+				
+				.container > div:nth-child(8) {
+					background-color: #009688;
+				}
+				
+				.container > div:nth-child(9) {
+					background-color: #9C27B0;
+					grid-column: 2 / span 3;
+				}
+				
+				.container > div {	
+					font-size: 3rem;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+				
+				}
+				
+				.container {
+					width: 90%;
+					height: 90%;
+				}
+		</textarea>
+		<textarea class="language-html">
+				<div class="container">
+					<div>1</div>
+					<div>2</div>
+					<div>3</div>
+					<div>4</div>
+					<div>5</div>
+					<div>6</div>
+					<div>7</div>
+					<div>8</div>
+					<div>9</div>
+				</div>
 		</textarea>
 	</article>
 
-	<article class="isolated demo slide" id="isolated-livedemo">
-		<textarea class="language-html"><p>Live demo in iframe!</p></textarea>
+	<header class="slide back-cover">
+		<h1>Grid</h1>
+		
+		<h2 class="delayed">90%</h2>
+	</header>
+</section>
+
+<section>
+	<header class="slide">
+		<h1>Scroll Snap</h1>
+	</header>
+
+	<article class="isolated demo slide" id="demo-scroll-snap">
+			<textarea class="language-css">
+					
+				
+					body {
+						
+					}
+					
+					div {
+						
+					}
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					div:nth-child(1) {
+						background-color: #1E88E5;
+					}
+					
+					div:nth-child(2) {
+						background-color: #E91E63;
+					}
+					
+					div:nth-child(3) {
+						background-color: #00BCD4;
+					}
+					
+					div:nth-child(4) {
+						background-color: #FF9800;
+					}
+					
+					div:nth-child(5) {
+						background-color: #43A047;
+					}
+					
+					div {
+						font-size: 5rem;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 100vw;
+						height: 100vh;
+					}
+					
+					body {
+						color: white;
+						font-weight: 300;
+						margin: 0;
+					}
+			</textarea>
+			<textarea class="language-html">
+				<div>Scroll</div>
+				<div>Sección 1</div>
+				<div>Sección 2</div>
+				<div>Sección 3</div>
+				<div>Sección 4</div>
+			</textarea>
+		</article>
+
+		<article class="isolated demo slide" id="demo-scroll-snap2">
+			<textarea class="language-css">
+					
+				
+					body {
+						scroll-snap-type: y mandatory;
+					}
+					
+					div {
+						scroll-snap-align: start;
+					}
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					div:nth-child(1) {
+						background-color: #1E88E5;
+					}
+					
+					div:nth-child(2) {
+						background-color: #E91E63;
+					}
+					
+					div:nth-child(3) {
+						background-color: #00BCD4;
+					}
+					
+					div:nth-child(4) {
+						background-color: #FF9800;
+					}
+					
+					div:nth-child(5) {
+						background-color: #43A047;
+					}
+					
+					div {
+						font-size: 5rem;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						width: 100vw;
+						height: 100vh;
+					}
+					
+					body {
+						color: white;
+						font-weight: 300;
+						margin: 0;
+					}
+			</textarea>
+			<textarea class="language-html">
+				<div>Scroll</div>
+				<div>Sección 1</div>
+				<div>Sección 2</div>
+				<div>Sección 3</div>
+				<div>Sección 4</div>
+			</textarea>
+		</article>
+
+	<article class="isolated demo slide" id="demo-scroll-snap3">
 		<textarea class="language-css">
-			p {
-				font-size: 250%;
-				color: #f06;
-			}
+				body {
+					display: flex;
+					width: fit-content;
+					scroll-snap-type: x mandatory;
+				}
+				
+				div {
+					scroll-snap-align: start;
+				}
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				div:nth-child(1) {
+					background-color: #1E88E5;
+				}
+				
+				div:nth-child(2) {
+					background-color: #E91E63;
+				}
+				
+				div:nth-child(3) {
+					background-color: #00BCD4;
+				}
+				
+				div:nth-child(4) {
+					background-color: #FF9800;
+				}
+				
+				div:nth-child(5) {
+					background-color: #43A047;
+				}
+				
+				div {
+					font-size: 5rem;
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100vw;
+					height: 100vh;
+				}
+				
+				body {
+					color: white;
+					font-weight: 300;
+					margin: 0;
+				}
+		</textarea>
+		<textarea class="language-html">
+			<div>Scroll</div>
+			<div>Sección 1</div>
+			<div>Sección 2</div>
+			<div>Sección 3</div>
+			<div>Sección 4</div>
 		</textarea>
 	</article>
 
-	<article class="slide">
-		<h1>Timer</h1>
-		<ul>
-			<li>Define the talk duration with the attribute <code>data-duration</code> on the <code>body</code>.</li>
-			<li>Timer in the form of a progress bar on the top</li>
-			<li>Style the timer and the end state with the selectors <code>#timer</code> and <code>#timer.end</code> respectively.</li>
-		</ul>
-	</article>
+	<header class="slide back-cover">
+		<h1>Scroll Snap</h1>
+		
+		<h2 class="delayed">90%</h2>
+	</header>
+</section>
 
-	<article class="slide" data-resolution="1024 768">
-		<h1>Resolution</h1>
-		<ul>
-			<li>Design for a specific resolution, and have slides scale up and down based on the viewport.</li>
-			<li>Define with the attribute <code>data-resolution</code> on the <code>&lt;body></code> for all slides, a grouping element, or individual slides (like this one!).</li>
-			<li>Try resizing the viewport, note how the slide size adapts!</li>
-		</ul>
-	</article>
+<section>
+	<header class="slide">
+		<h1>Pseudo-clases</h1>
+	</header>
 
 	<article class="slide">
-		<h1>Presenter View</h1>
+		<h1>:has()</h1>
 
-		<ul>
-			<li>Use <code>&lt;p class="presenter-notes"></code> for presenter notes. You need at least one of these to have the plugin loaded.</li>
-			<li>Presenter view with <kbd>Ctrl</kbd><kbd>P</kbd> (or <kbd>Shift</kbd><kbd>P</kbd>)</li>
-			<li>Also timer, upcoming slide</li>
-		</ul>
+		<pre class="language-css"><code>a:has(> img)</code></pre>
+
+		<h2 class="delayed">90%</h2>
 	</article>
 
-	<article class="slide" id="slidestyle">
-		<style data-slide>
-			.slide {
-				background: rebeccapurple;
-			}
-		</style>
-		<h1>Slide-specific CSS</h1>
-		<p>You can use the <code>data-slide</code> attribute on <code>&lt;style></code> elements in slides, to only style the current slide or inside sections that include multiple slides to style all of them and nothing else.</p>
-		<p>For example, run <code class="language-js">$('#slidestyle style').sheet.cssRules[0].selectorText</code> in the console to see how the original selector gets changed.</p>
+	<article class="slide">
+		<h1>:is()</h1>
+
+		<pre class="language-css"><code>/* Selects any paragraph inside a header, main
+or footer element that is being hovered */
+:is(header, main, footer) p {
+color: red;
+cursor: pointer;
+}
+
+/* The above is equivalent to the following */
+header p,
+main p,
+footer p {
+color: red;
+cursor: pointer;
+}</code></pre>
+
+		<h2 class="delayed">90%</h2>
+	</article>
+
+	<article class="slide">
+		<h1>:not()</h1>
+
+		<pre class="language-css"><code>li:not(.moreinfo) { ... }</code></pre>
+
+		<h2 class="delayed">90%</h2>
 	</article>
 </section>
 
-<footer class="slide" title="The End">
-	<h1>Thank you!</h1>
-	<p>Get it or contribute at <a href="https://github.com/LeaVerou/inspire.js">github.com/LeaVerou/inspire.js</a></p>
+<section>
+	<header class="slide">
+		<h1>Clip-path</h1>
+	</header>
+
+	<article class="demo slide" id="demo-clip-path">
+		<textarea class="language-css">
+			header {
+				width: 100%;
+				clip-path: polygon(0 0, 100% 0, calc(100% - 5vw) 50%, 100% 100%, 0 100%, 5vw 50%);
+			}
+
+			div {
+				background-image: url(https://res.cloudinary.com/kkhenriquez/image/upload/v1498660138/kiwis_z68hgn.png);
+				clip-path: polygon(22% 0, 35% 15%, 35% 40%, 30% 50%, 100% 50%, 65% 85%, 80% 100%, 30% 100%, 10% 80%, 10% 50%, 22% 30%, 22% 20%, 0 20%);
+				transition: all .3s;
+			}
+
+			div:hover {
+				clip-path: polygon(0 14%, 0 0, 70% 0, 100% 0, 100% 26%, 100% 44%, 100% 100%, 69% 100%, 0 100%, 0 78%, 0 56%, 0 34%, 0 20%);
+			}
+
+
+
+			
+
+
+
+
+
+
+
+			header {
+				text-align: center;
+				background-color: #45A7C8;
+				color: Snow;
+				font-size: 1.2em;
+				letter-spacing: 0.1em;
+				margin-bottom: 3vw;
+				padding: 10px 0 2vw 0;
+			}
+
+			div {
+				height: 25rem;
+				width: 25rem;
+			}
+		</textarea>
+		<textarea class="language-html">
+			<header>
+				<h1>Hola!</h1>
+			</header>
+
+			<div></div>
+		</textarea>
+	</article>
+
+	<article class="slide iframe dont-resize onscreen-nav mv-target-within" data-index="6">
+		<iframe data-src="https://bennettfeely.com/clippy/" src="https://bennettfeely.com/clippy/"></iframe>
+		<h1><a href="https://bennettfeely.com/clippy/" target="_blank">bennettfeely.com/clippy/</a></h1>
+	</article>
+
+	<header class="slide back-cover">
+		<h1>Clip-path</h1>
+		
+		<h2 class="delayed">90%</h2>
+	</header>
+</section>
+
+<section>
+	<header class="slide">
+		<h1>Custom Selectors & Media Queries</h1>
+	</header>
+
+	<article class="slide">
+
+		<pre class="language-css"><code>@custom-media --narrow-window (max-width: 30em);
+
+@media (--narrow-window) {}
+
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+
+article :--heading + p {}</code></pre>
+
+	</article>
+
+	<header class="slide back-cover">
+		<h1>Custom Selectors & Media Queries</h1>
+		
+		<h2 class="delayed">90%</h2>
+	</header>
+</section>
+
+<section>
+	<header class="slide">
+		<h1>Filter</h1>
+	</header>
+
+	<article class="slide">
+		<pre class="language-css"><code>blur()
+brightness()
+contrast()
+drop-shadow()
+grayscale()
+hue-rotate()
+invert()
+opacity()
+saturate()
+sepia()</code></pre>
+	</article>
+
+	<article class="demo slide" id="demo-filter">
+		<textarea class="language-css">
+			img {
+				width: 25rem;
+				height: 25rem;
+			}
+
+		</textarea>
+		<textarea class="language-html">
+			<img src="img/emoji.jpg">
+		</textarea>
+	</article>
+
+	<article class="demo slide" id="demo-filter2">
+		<textarea class="language-css">
+			h1 {
+				
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			h1 {
+				font-size: 5rem;
+			}
+		</textarea>
+		<textarea class="language-html">
+			<h1>Lorem Ipsum</h1>
+		</textarea>
+	</article>
+
+	<header class="slide back-cover">
+		<h1>Filter</h1>
+		
+		<h2 class="delayed">90%</h2>
+	</header>
+</section>
+
+<section>
+	<article class="slide">
+		<h1>Enlaces de interés</h1>
+		<p><a href="">W3C CSS Current Work</a></p>
+		<p><a href="cssdb.org">cssdb.org</a></p>
+	</article>
+</section>
+
+<footer class="slide">
+	<h1>Muchas gracias! 🤗</h1>
 </footer>
 
 <script src="inspire.js"></script>

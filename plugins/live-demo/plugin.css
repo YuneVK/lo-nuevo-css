@@ -21,8 +21,17 @@
 }
 
 .isolated.demo.slide {
-	--division: 50;
+	--division: 60;
+	padding: 0;
 }
+
+.isolated.demo.slide .demo-controls {
+	display: none;
+}
+
+/* .isolated:not(.horizontal).demo.slide > iframe {
+	margin: 0;
+} */
 
 	.isolated.demo.slide > iframe {
 		justify-self: stretch;
