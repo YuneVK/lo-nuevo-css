@@ -152,7 +152,7 @@ body {
 
 	.delayed.displayed,
 	.delayed-children > .displayed {
-		opacity: .3;
+		opacity: 1;
 	}
 
 	.delayed.current,

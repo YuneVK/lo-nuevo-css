@@ -10,7 +10,7 @@
 	.iframe.slide > h1 {
 		position: absolute;
 		bottom: 0; right: 0; left: 0;
-		background: linear-gradient(to right, transparent, rgba(0,0,0,.3), transparent) rgba(0,0,0,.4);
+		background: linear-gradient(to right, transparent, rgba(0,0,0,.7), transparent) rgba(0,0,0,.7);
 		font-size: 150%;
 		font-weight: inherit;
 		text-shadow: 0 0 .2em rgba(0,0,0,.2);
