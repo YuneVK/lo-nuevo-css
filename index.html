@@ -1,60 +1,69 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-	<title>Inspire.js: A brief introduction</title>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <title>Inspire.js: A brief introduction</title>
 
-	<link href="inspire.css" rel="stylesheet" />
-	<link href="theme.css" rel="stylesheet" />
-	<link href="talk.css" rel="stylesheet" />
-</head>
-<body class="language-markup" data-prism-plugins="normalize-whitespace">
+    <link href="inspire.css" rel="stylesheet" />
+    <link href="theme.css" rel="stylesheet" />
+    <link href="talk.css" rel="stylesheet" />
+  </head>
+  <body class="language-markup" data-prism-plugins="normalize-whitespace">
+    <header id="intro" class="slide">
+      <h1>
+        Lo&nbsp;nuevo de&nbsp;CSS
+      </h1>
+      <h2>
+        Qué&nbsp;está&nbsp;por&nbsp;venir
+        y&nbsp;qué&nbsp;ha&nbsp;llegado&nbsp;ya
+      </h2>
+    </header>
 
-<header id="intro" class="slide">
-	<h1>
-		Lo&nbsp;nuevo de&nbsp;CSS
-	</h1>
-	<h2>
-		Qué&nbsp;está&nbsp;por&nbsp;venir y&nbsp;qué&nbsp;ha&nbsp;llegado&nbsp;ya
-	</h2>
-</header>
+    <section>
+      <header class="slide card">
+        <div>
+          <img src="img/sonia-ruiz.jpg" />
+          <div>
+            <h2>Sonia Ruiz</h2>
+            <p>Frontend Developer</p>
+            <p>@Yune__vk</p>
+          </div>
+        </div>
+      </header>
+    </section>
 
-<section>
-	<header class="slide card">
-		<div>
-			<img src="img/sonia-ruiz.jpg">
-			<div>
-				<h2>Sonia Ruiz</h2>
-				<p>Frontend Developer</p>
-				<p>@Yune__vk</p>
-			</div>
-		</div>
-	</header>
-</section>
+    <section>
+      <header class="slide">
+        <div>
+          <h1>Lo nuevo de CSS</h1>
+        </div>
+      </header>
 
-<section>
-	<header class="slide">
-		<div>
-			<h1>Lo nuevo de CSS</h1>
-		</div>
-	</header>
+      <article
+        class="slide iframe dont-resize onscreen-nav mv-target-within"
+        data-index="6"
+      >
+        <iframe
+          data-src="https://caniuse.com/"
+          src="https://caniuse.com/"
+        ></iframe>
+        <h1><a href="https://caniuse.com/" target="_blank">caniuse.com</a></h1>
+      </article>
+    </section>
 
-	<article class="slide iframe dont-resize onscreen-nav mv-target-within" data-index="6">
-		<iframe data-src="https://caniuse.com/" src="https://caniuse.com/"></iframe>
-		<h1><a href="https://caniuse.com/" target="_blank">caniuse.com</a></h1>
-	</article>
-</section>
+    <section>
+      <header class="slide">
+        <div>
+          <h1>Variables</h1>
+        </div>
+      </header>
 
-<section>
-	<header class="slide">
-		<div>
-			<h1>Variables</h1>
-		</div>
-	</header>
-
-	<article class="slide" id="demo-variable">
-			<pre class="language-css"><code>:root { /* Es igual a html {...} */
+      <article class="slide" id="demo-variable">
+        <pre class="language-css"><code>:root { /* Es igual a html {...} */
 	--primary-color: teal;
 	--secondary-color: blue;
 }
@@ -66,25 +75,25 @@ h1 {
 button {
 	background-color: var(--primary-color);
 }</code></pre>
-	</article>
+      </article>
 
-	<header class="slide back-cover">
-		<div>
-			<h1>Variables</h1>
-			<p class="compatibility delayed">+90%</p>
-		</div>
-	</header>
-</section>
+      <header class="slide back-cover">
+        <div>
+          <h1>Variables</h1>
+          <p class="compatibility delayed">+90%</p>
+        </div>
+      </header>
+    </section>
 
-<section>
-	<header class="slide">
-		<div>
-			<h1>calc()</h1>
-		</div>
-	</header>
+    <section>
+      <header class="slide">
+        <div>
+          <h1>calc()</h1>
+        </div>
+      </header>
 
-	<article class="demo slide" id="demo-calc">
-		<textarea class="language-css">
+      <article class="demo slide" id="demo-calc">
+        <textarea class="language-css">
 			div {
 				background: url('/img/emoji.jpg')
 					100% 100% no-repeat;
@@ -110,30 +119,33 @@ button {
 				width: 20rem;
 				height: 20rem;
 			}
-		</textarea>
-		<textarea class="language-html"><div></div></textarea>
-	</article>
+		</textarea
+        >
+        <textarea class="language-html"><div></div></textarea>
+      </article>
 
-	<header class="slide back-cover">
-		<div>
-			<h1>calc()</h1>
-			<p class="compatibility delayed">+95%</p>
-			<p class="bonus delayed"><span>¡Bonus!</span> <code>max()</code>, <code>min()</code>, <code>clamp()</code><br>y funciones trigonométricas</p>
-		</div>
-		<!-- <p class="compatibility delayed">90%</p> -->
+      <header class="slide back-cover">
+        <div>
+          <h1>calc()</h1>
+          <p class="compatibility delayed">+95%</p>
+          <p class="bonus delayed">
+            <span>¡Bonus!</span> <code>max()</code>, <code>min()</code>,
+            <code>clamp()</code><br />y funciones trigonométricas
+          </p>
+        </div>
+        <!-- <p class="compatibility delayed">90%</p> -->
+      </header>
+    </section>
 
-	</header>
-</section>
+    <section>
+      <header class="slide">
+        <div>
+          <h1>Conic Gradients</h1>
+        </div>
+      </header>
 
-<section>
-	<header class="slide">
-		<div>
-			<h1>Conic Gradients</h1>
-		</div>
-	</header>
-
-	<article class="demo slide" id="demo-conic">
-		<textarea class="language-css">
+      <article class="demo slide" id="demo-conic">
+        <textarea class="language-css">
 			div {
 				background:
 					conic-gradient(red, orange);
@@ -158,29 +170,30 @@ button {
 				width: 20rem;
 				height: 20rem;
 			}
-		</textarea>
-		<textarea class="language-html"><div></div></textarea>
-	</article>
+		</textarea
+        >
+        <textarea class="language-html"><div></div></textarea>
+      </article>
 
-	<header class="slide back-cover">
-		<div>
-			<h1>Conic Gradients</h1>
-			<p class="compatibility delayed">+65%</p>
-		</div>
-	</header>
-</section>
+      <header class="slide back-cover">
+        <div>
+          <h1>Conic Gradients</h1>
+          <p class="compatibility delayed">+65%</p>
+        </div>
+      </header>
+    </section>
 
-<section>
-	<header class="slide">
-		<div>
-			<h1>Media Queries Nivel 4</h1>
-		</div>
-	</header>
+    <section>
+      <header class="slide">
+        <div>
+          <h1>Media Queries Nivel 4</h1>
+        </div>
+      </header>
 
-	<article class="slide">
-		<h1>Detectar el tipo de cursor</h1>
+      <article class="slide">
+        <h1>Detectar el tipo de cursor</h1>
 
-		<pre class="language-css"><code>@media (pointer:coarse) {
+        <pre class="language-css"><code>@media (pointer:coarse) {
 	/* Estilos para pantallas táctiles */
 }
 
@@ -188,41 +201,43 @@ button {
 	/* Estilos para pantallas que soporten
 		el efecto hover */
 }</code></pre>
-	</article>
+      </article>
 
-	<article class="slide">
-		<h1>Nueva sintaxis</h1>
+      <article class="slide">
+        <h1>Nueva sintaxis</h1>
 
-		<pre class="language-css"><code>@media (min-width: 40em) and (max-width: 59em) {
-	/* Tamaños de pantalla entre 
-		40em y 59em */
+        <pre class="language-css"><code>/* ANIGUA SINTAXIS */
+@media (min-width: 40em) and (max-width: 59em) {
+	/* Tamaños de pantalla entre  40em y 59em */
 }
 
+/* NUEVA SINTAXIS */
 @media (40em <= width <= 59em ) {
-	/* Tamaños de pantalla entre  
-		40em y 59em */
+	/* Tamaños de pantalla entre 40em y 59em */
 }</code></pre>
-	</article>
+      </article>
 
-	<header class="slide back-cover">
-		<div>
-			<h1>Media Queries Nivel 4</h1>
+      <header class="slide back-cover">
+        <div>
+          <h1>Media Queries Nivel 4</h1>
 
-			<p class="compatibility delayed"><span>Detectar el tipo de cursor</span> +90%</p>
-			<p class="compatibility delayed"><span>Nueva sintaxis</span> 0%</p>
-		</div>
-	</header>
-</section>
+          <p class="compatibility delayed">
+            <span>Detectar el tipo de cursor</span> +90%
+          </p>
+          <p class="compatibility delayed"><span>Nueva sintaxis</span> 0%</p>
+        </div>
+      </header>
+    </section>
 
-<section>
-	<header class="slide">
-		<div>
-			<h1>Grid</h1>
-		</div>
-	</header>
+    <section>
+      <header class="slide">
+        <div>
+          <h1>Grid</h1>
+        </div>
+      </header>
 
-	<article class="demo slide" id="demo-grid">
-		<textarea class="language-css">
+      <article class="demo slide" id="demo-grid">
+        <textarea class="language-css">
 				.container {	
 					display: grid;
 					grid-template-columns: repeat(6, 1fr);
@@ -284,8 +299,9 @@ button {
 					width: 90%;
 					height: 90%;
 				}
-		</textarea>
-		<textarea class="language-html">
+		</textarea
+        >
+        <textarea class="language-html">
 				<div class="container">
 					<div>1</div>
 					<div>2</div>
@@ -297,27 +313,28 @@ button {
 					<div>8</div>
 					<div>9</div>
 				</div>
-		</textarea>
-	</article>
+		</textarea
+        >
+      </article>
 
-	<header class="slide back-cover">
-		<div>
-			<h1>Grid</h1>
-			
-			<p class="compatibility delayed">+90%</p>
-		</div>
-	</header>
-</section>
+      <header class="slide back-cover">
+        <div>
+          <h1>Grid</h1>
 
-<section>
-	<header class="slide">
-		<div>
-			<h1>Scroll Snap</h1>
-		</div>
-	</header>
+          <p class="compatibility delayed">+90%</p>
+        </div>
+      </header>
+    </section>
 
-	<article class="isolated demo slide" id="demo-scroll-snap">
-			<textarea class="language-css">
+    <section>
+      <header class="slide">
+        <div>
+          <h1>Scroll Snap</h1>
+        </div>
+      </header>
+
+      <article class="isolated demo slide" id="demo-scroll-snap">
+        <textarea class="language-css">
 					
 				
 					body {
@@ -374,18 +391,20 @@ button {
 						font-weight: 300;
 						margin: 0;
 					}
-			</textarea>
-			<textarea class="language-html">
+			</textarea
+        >
+        <textarea class="language-html">
 				<div>Scroll</div>
 				<div>Sección 1</div>
 				<div>Sección 2</div>
 				<div>Sección 3</div>
 				<div>Sección 4</div>
-			</textarea>
-		</article>
+			</textarea
+        >
+      </article>
 
-		<article class="isolated demo slide" id="demo-scroll-snap2">
-			<textarea class="language-css">
+      <article class="isolated demo slide" id="demo-scroll-snap2">
+        <textarea class="language-css">
 					
 				
 					body {
@@ -442,18 +461,20 @@ button {
 						font-weight: 300;
 						margin: 0;
 					}
-			</textarea>
-			<textarea class="language-html">
+			</textarea
+        >
+        <textarea class="language-html">
 				<div>Scroll</div>
 				<div>Sección 1</div>
 				<div>Sección 2</div>
 				<div>Sección 3</div>
 				<div>Sección 4</div>
-			</textarea>
-		</article>
+			</textarea
+        >
+      </article>
 
-	<article class="isolated demo slide" id="demo-scroll-snap3">
-		<textarea class="language-css">
+      <article class="isolated demo slide" id="demo-scroll-snap3">
+        <textarea class="language-css">
 				body {
 					display: flex;
 					width: fit-content;
@@ -510,25 +531,27 @@ button {
 					font-weight: 300;
 					margin: 0;
 				}
-		</textarea>
-		<textarea class="language-html">
+		</textarea
+        >
+        <textarea class="language-html">
 			<div>Scroll</div>
 			<div>Sección 1</div>
 			<div>Sección 2</div>
 			<div>Sección 3</div>
 			<div>Sección 4</div>
-		</textarea>
-	</article>
+		</textarea
+        >
+      </article>
 
-	<header class="slide back-cover">
-		<div>
-			<h1>Scroll Snap</h1>
-			
-			<p class="compatibility delayed">+80%</p>
-		</div>
-	</header>
-</section>
-<!--
+      <header class="slide back-cover">
+        <div>
+          <h1>Scroll Snap</h1>
+
+          <p class="compatibility delayed">+80%</p>
+        </div>
+      </header>
+    </section>
+    <!--
 <section>
 	<header class="slide">
 		<h1>Pseudo-clases</h1>
@@ -572,15 +595,15 @@ cursor: pointer;
 	</article>
 </section>
 -->
-<section>
-	<header class="slide">
-		<div>
-			<h1>Clip-path</h1>
-		</div>
-	</header>
+    <section>
+      <header class="slide">
+        <div>
+          <h1>Clip-path</h1>
+        </div>
+      </header>
 
-	<article class="demo slide" id="demo-clip-path">
-		<textarea class="language-css">
+      <article class="demo slide" id="demo-clip-path">
+        <textarea class="language-css">
 			header {
 				width: 100%;
 				clip-path: polygon(0 0, 100% 0, calc(100% - 5vw) 50%, 100% 100%, 0 100%, 5vw 50%);
@@ -625,30 +648,42 @@ cursor: pointer;
 				width: 25rem;
 				/*clip-path: polygon(22% 0, 35% 15%, 35% 40%, 30% 50%, 100% 50%, 65% 85%, 80% 100%, 30% 100%, 10% 80%, 10% 50%, 22% 30%, 22% 20%, 0 20%);*/
 			}
-		</textarea>
-		<textarea class="language-html">
+		</textarea
+        >
+        <textarea class="language-html">
 			<header>
 				<h1>¡Hola!</h1>
 			</header>
 
 			<div></div>
-		</textarea>
-	</article>
+		</textarea
+        >
+      </article>
 
-	<article class="slide iframe dont-resize onscreen-nav mv-target-within" data-index="6">
-		<iframe data-src="https://bennettfeely.com/clippy/" src="https://bennettfeely.com/clippy/"></iframe>
-		<h1><a href="https://bennettfeely.com/clippy/" target="_blank">bennettfeely.com/clippy/</a></h1>
-	</article>
+      <article
+        class="slide iframe dont-resize onscreen-nav mv-target-within"
+        data-index="6"
+      >
+        <iframe
+          data-src="https://bennettfeely.com/clippy/"
+          src="https://bennettfeely.com/clippy/"
+        ></iframe>
+        <h1>
+          <a href="https://bennettfeely.com/clippy/" target="_blank"
+            >bennettfeely.com/clippy/</a
+          >
+        </h1>
+      </article>
 
-	<header class="slide back-cover">
-		<div>
-			<h1>Clip-path</h1>
-			
-			<p class="compatibility delayed">+90%</p>
-		</div>
-	</header>
-</section>
-<!--
+      <header class="slide back-cover">
+        <div>
+          <h1>Clip-path</h1>
+
+          <p class="compatibility delayed">+90%</p>
+        </div>
+      </header>
+    </section>
+    <!--
 <section>
 	<header class="slide">
 		<h1>Custom Selectors & Media Queries</h1>
@@ -673,15 +708,15 @@ article :--heading + p {}</code></pre>
 	</header>
 </section>
 -->
-<section>
-	<header class="slide">
-		<div>
-			<h1>Filter</h1>
-		</div>
-	</header>
+    <section>
+      <header class="slide">
+        <div>
+          <h1>Filter</h1>
+        </div>
+      </header>
 
-	<article class="slide">
-		<pre class="language-css"><code>blur()
+      <article class="slide">
+        <pre class="language-css"><code>blur()
 brightness()
 contrast()
 drop-shadow()
@@ -691,23 +726,25 @@ invert()
 opacity()
 saturate()
 sepia()</code></pre>
-	</article>
+      </article>
 
-	<article class="demo slide" id="demo-filter">
-		<textarea class="language-css">
+      <article class="demo slide" id="demo-filter">
+        <textarea class="language-css">
 			img {
 				width: 25rem;
 				height: 25rem;
 			}
 
-		</textarea>
-		<textarea class="language-html">
+		</textarea
+        >
+        <textarea class="language-html">
 			<img src="img/emoji.jpg">
-		</textarea>
-	</article>
+		</textarea
+        >
+      </article>
 
-	<article class="demo slide" id="demo-filter2">
-		<textarea class="language-css">
+      <article class="demo slide" id="demo-filter2">
+        <textarea class="language-css">
 			h1 {
 				
 			}
@@ -732,42 +769,48 @@ sepia()</code></pre>
 			h1 {
 				font-size: 5rem;
 			}
-		</textarea>
-		<textarea class="language-html">
+		</textarea
+        >
+        <textarea class="language-html">
 			<h1>Lorem Ipsum</h1>
-		</textarea>
-	</article>
+		</textarea
+        >
+      </article>
 
-	<header class="slide back-cover">
-		<div>
-			<h1>Filter</h1>
-			
-			<p class="compatibility delayed">+90%</p>
-		</div>
-	</header>
-</section>
+      <header class="slide back-cover">
+        <div>
+          <h1>Filter</h1>
 
-<section>
-	<article class="slide">
-		<h1>¡Conoce más!</h1>
-		<p class="link"><a href="">W3C CSS Current Work</a> <span>www.w3.org/Style/CSS/current-work</span></p>
-		<p class="link"><a href="cssdb.org">What’s next for CSS?</a><span>cssdb.org</span></p>
-	</article>
-</section>
+          <p class="compatibility delayed">+90%</p>
+        </div>
+      </header>
+    </section>
 
-<section>
-	<header class="slide">
-		<div>
-			<h1 class="thank">¡Muchas gracias!</h1>
-		
-			<div class="rrss">
-				<p>@Yune__vk</p>
-			</div>
-		</div>
-	</header>
-</section>
+    <section>
+      <article class="slide">
+        <h1>¡Conoce más!</h1>
+        <p class="link">
+          <a href="">W3C CSS Current Work</a>
+          <span>www.w3.org/Style/CSS/current-work</span>
+        </p>
+        <p class="link">
+          <a href="cssdb.org">What’s next for CSS?</a><span>cssdb.org</span>
+        </p>
+      </article>
+    </section>
 
-<script src="inspire.js"></script>
+    <section>
+      <header class="slide">
+        <div>
+          <h1 class="thank">¡Muchas gracias!</h1>
 
-</body>
+          <div class="rrss">
+            <p>@Yune__vk</p>
+          </div>
+        </div>
+      </header>
+    </section>
+
+    <script src="inspire.js"></script>
+  </body>
 </html>
