@@ -228,7 +228,7 @@ button {
         </div>
       </header>
     </section>
-
+    <!--
     <section>
       <header class="slide">
         <div>
@@ -325,7 +325,7 @@ button {
         </div>
       </header>
     </section>
-
+-->
     <section>
       <header class="slide">
         <div>
@@ -551,50 +551,49 @@ button {
         </div>
       </header>
     </section>
-    <!--
-<section>
-	<header class="slide">
-		<h1>Pseudo-clases</h1>
-	</header>
+    <section>
+      <header class="slide">
+        <div>
+          <h1>Pseudo-clases</h1>
+        </div>
+      </header>
 
-	<article class="slide">
-		<h1>:has()</h1>
+      <article class="slide">
+        <h1>:has()</h1>
+        <br />
+        <pre class="language-css"><code>a:has(> img)</code></pre>
+      </article>
 
-		<pre class="language-css"><code>a:has(> img)</code></pre>
+      <article class="slide">
+        <h1>:is()</h1>
 
-		<p class="compatibility delayed">90%</p>
-	</article>
-
-	<article class="slide">
-		<h1>:is()</h1>
-
-		<pre class="language-css"><code>/* Selects any paragraph inside a header, main
-or footer element that is being hovered */
-:is(header, main, footer) p {
+        <pre class="language-css"><code>:is(header, main, footer) p {
 color: red;
 cursor: pointer;
 }
 
-/* The above is equivalent to the following */
-header p,
-main p,
-footer p {
+/* Es equivalente a */
+header p, main p, footer p {
 color: red;
 cursor: pointer;
 }</code></pre>
+      </article>
 
-		<p class="compatibility delayed">90%</p>
-	</article>
+      <article class="slide">
+        <h1>:not()</h1>
+        <br />
+        <pre class="language-css"><code>li:not(.moreinfo) { ... }</code></pre>
+      </article>
 
-	<article class="slide">
-		<h1>:not()</h1>
+      <header class="slide back-cover">
+        <div>
+          <h1>Pseudo-clases</h1>
 
-		<pre class="language-css"><code>li:not(.moreinfo) { ... }</code></pre>
-
-		<p class="compatibility delayed">90%</p>
-	</article>
-</section>
--->
+          <p class="compatibility delayed"><span>:is(), :not()</span> +90%</p>
+          <p class="compatibility delayed"><span>>:has()</span> 0%</p>
+        </div>
+      </header>
+    </section>
     <section>
       <header class="slide">
         <div>
