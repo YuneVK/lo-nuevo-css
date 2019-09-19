@@ -11,6 +11,10 @@
     <link href="inspire.css" rel="stylesheet" />
     <link href="theme.css" rel="stylesheet" />
     <link href="talk.css" rel="stylesheet" />
+    <link
+      href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/BLOKKNeue-Regular.css"
+      rel="stylesheet"
+    />
   </head>
   <body class="language-markup" data-prism-plugins="normalize-whitespace">
     <header id="intro" class="slide">
@@ -39,10 +43,43 @@
     <section>
       <header class="slide">
         <div>
-          <h1>Lo nuevo de CSS</h1>
+          <h1>Un poco de historia</h1>
         </div>
       </header>
 
+      <article
+        class="slide iframe dont-resize onscreen-nav mv-target-within"
+        data-index="6"
+      >
+        <iframe
+          data-src="https://www.w3.org/TR/REC-CSS1-961217"
+          src="https://www.w3.org/TR/REC-CSS1-961217"
+        ></iframe>
+        <h1>
+          <a href="https://www.w3.org/TR/REC-CSS1-961217" target="_blank"
+            >w3.org/TR/REC-CSS1-961217</a
+          >
+        </h1>
+      </article>
+
+      <article class="slide white">
+        <img src="./img/css-modules.png" alt="CSS Modules" />
+      </article>
+
+      <article
+        class="slide iframe dont-resize onscreen-nav mv-target-within"
+        data-index="6"
+      >
+        <iframe
+          data-src="https://www.w3.org/Style/CSS/current-work"
+          src="https://www.w3.org/Style/CSS/current-work"
+        ></iframe>
+        <h1>
+          <a href="https://www.w3.org/Style/CSS/current-work" target="_blank"
+            >w3.org/Style/CSS/current-work</a
+          >
+        </h1>
+      </article>
       <article
         class="slide iframe dont-resize onscreen-nav mv-target-within"
         data-index="6"
@@ -53,6 +90,14 @@
         ></iframe>
         <h1><a href="https://caniuse.com/" target="_blank">caniuse.com</a></h1>
       </article>
+    </section>
+
+    <section>
+      <header class="slide">
+        <div>
+          <h1>Lo nuevo de CSS</h1>
+        </div>
+      </header>
     </section>
 
     <section>
@@ -186,7 +231,7 @@ button {
     <section>
       <header class="slide">
         <div>
-          <h1>Media Queries Nivel 4</h1>
+          <h1>Media Queries</h1>
         </div>
       </header>
 
@@ -201,6 +246,7 @@ button {
 	/* Estilos para pantallas que soporten
 		el efecto hover */
 }</code></pre>
+        <span><p class="compatibility delayed">+90%</p></span>
       </article>
 
       <article class="slide">
@@ -215,117 +261,45 @@ button {
 @media (40em <= width <= 59em ) {
 	/* Tamaños de pantalla entre 40em y 59em */
 }</code></pre>
+        <span><p class="compatibility delayed">0%</p></span>
       </article>
 
-      <header class="slide back-cover">
-        <div>
-          <h1>Media Queries Nivel 4</h1>
+      <article class="slide">
+        <h1>Custom Media Queries</h1>
 
-          <p class="compatibility delayed">
-            <span>Detectar el tipo de cursor</span> +90%
-          </p>
-          <p class="compatibility delayed"><span>Nueva sintaxis</span> 0%</p>
-        </div>
-      </header>
+        <pre
+          class="language-css"
+        ><code>@custom-media --mobile (max-width: 30em);
+
+@media (--mobile) {}</code></pre>
+        <span><p class="compatibility delayed">0%</p></span>
+      </article>
     </section>
-    <!--
+
     <section>
       <header class="slide">
         <div>
-          <h1>Grid</h1>
+          <h1>Custom Selectors</h1>
         </div>
       </header>
 
-      <article class="demo slide" id="demo-grid">
-        <textarea class="language-css">
-				.container {	
-					display: grid;
-					grid-template-columns: repeat(6, 1fr);
-					grid-template-rows: repeat(4, 1fr);
-				}
-				
-				.container > div:nth-child(1) {
-					background-color: #1E88E5;
-					grid-column: 1 / span 3;
-				}
-				
-				.container > div:nth-child(2) {
-					background-color: #E91E63;
-				}
-				
-				.container > div:nth-child(3) {
-					background-color: #00BCD4;
-					grid-column: 5 / span 6;
-					grid-row: 1 / span 4;
-				}
-				
-				.container > div:nth-child(4) {
-					background-color: #FF9800;
-					grid-column: 1 / span 2;
-					grid-row: 2 / span 2;
-				}
-				
-				.container > div:nth-child(5) {
-					background-color: #9E9E9E;
-					grid-column: 3 / span 2;
-				}
-				
-				.container > div:nth-child(6) {
-					background-color: #43A047;
-				}
-				
-				.container > div:nth-child(7) {
-					background-color: #F44336;
-				}
-				
-				.container > div:nth-child(8) {
-					background-color: #009688;
-				}
-				
-				.container > div:nth-child(9) {
-					background-color: #9C27B0;
-					grid-column: 2 / span 3;
-				}
-				
-				.container > div {	
-					font-size: 3rem;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-				
-				}
-				
-				.container {
-					width: 90%;
-					height: 90%;
-				}
-		</textarea
-        >
-        <textarea class="language-html">
-				<div class="container">
-					<div>1</div>
-					<div>2</div>
-					<div>3</div>
-					<div>4</div>
-					<div>5</div>
-					<div>6</div>
-					<div>7</div>
-					<div>8</div>
-					<div>9</div>
-				</div>
-		</textarea
-        >
+      <article class="slide" id="demo-custom-selector">
+        <pre
+          class="language-css"
+        ><code>@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+
+:--heading + p {}</code></pre>
       </article>
 
       <header class="slide back-cover">
         <div>
-          <h1>Grid</h1>
-
-          <p class="compatibility delayed">+90%</p>
+          <h1>Custom Selectors</h1>
+          <p class="compatibility delayed">0%</p>
         </div>
+        <!-- <p class="compatibility delayed">90%</p> -->
       </header>
     </section>
--->
+
     <section>
       <header class="slide">
         <div>
@@ -562,6 +536,7 @@ button {
         <h1>:has()</h1>
         <br />
         <pre class="language-css"><code>a:has(> img)</code></pre>
+        <span><p class="compatibility delayed">0%</p></span>
       </article>
 
       <article class="slide">
@@ -575,22 +550,15 @@ button {
 header p, main p, footer p {
   /* ... */
 }</code></pre>
+        <span><p class="compatibility delayed">"90%"</p></span>
       </article>
 
       <article class="slide">
         <h1>:not()</h1>
         <br />
         <pre class="language-css"><code>li:not(.moreinfo) { ... }</code></pre>
+        <span><p class="compatibility delayed">+90%</p></span>
       </article>
-
-      <header class="slide back-cover">
-        <div>
-          <h1>Pseudo-clases</h1>
-
-          <p class="compatibility delayed"><span>:is(), :not()</span> +90%</p>
-          <p class="compatibility delayed"><span>:has()</span> 0%</p>
-        </div>
-      </header>
     </section>
     <section>
       <header class="slide">
@@ -614,6 +582,18 @@ header p, main p, footer p {
             
             p {
               font-size: 1rem;
+            }
+
+
+
+
+
+
+
+
+
+            p {
+              font-family: "BLOKKNeue-Regular";
             }
 		</textarea
         >
@@ -649,213 +629,394 @@ header p, main p, footer p {
       </header>
     </section>
 
-    <!--
-			<section>
+    <section>
       <header class="slide">
         <div>
-          <h1>Clip-path</h1>
+          <h1>position: sticky</h1>
         </div>
       </header>
 
-      <article class="demo slide" id="demo-clip-path">
+      <article class="demo slide" id="demo-sticky">
         <textarea class="language-css">
-			header {
-				width: 100%;
-				clip-path: polygon(0 0, 100% 0, calc(100% - 5vw) 50%, 100% 100%, 0 100%, 5vw 50%);
-			}
+            .heading {
 
-			div {
-				background-image: url(img/polar.webp);
-				background-size: cover;
-				transition: all .3s;
-				clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
-
-			}
-
-			div:hover {
-				clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
-
-
-			}
-
-
-
-			
-
-
-
-
-
-
-
-			header {
-				text-align: center;
-				background-color: teal;
-				color: Snow;
-				font-size: 1.2em;
-				letter-spacing: 0.1em;
-				margin-bottom: 3vw;
-				padding: 10px 0 2vw 0;
-			}
-
-			div {
-				height: 25rem;
-				width: 25rem;
-				/*clip-path: polygon(22% 0, 35% 15%, 35% 40%, 30% 50%, 100% 50%, 65% 85%, 80% 100%, 30% 100%, 10% 80%, 10% 50%, 22% 30%, 22% 20%, 0 20%);*/
-			}
-		</textarea
+            }
+            
+            div {
+              height: 80%;
+              overflow: scroll;
+            }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            p {
+              font-size: .7rem;
+            }
+            
+            .heading {	
+              font-size: 2rem;
+              padding: .2rem 1rem;
+              background: teal;
+              margin: 0;
+            }
+            
+            p:not(.heading) {
+              font-family: "BLOKKNeue-Regular";
+              margin: 0;
+            }
+      </textarea
         >
         <textarea class="language-html">
-			<header>
-				<h1>¡Hola!</h1>
-			</header>
-
-			<div></div>
-		</textarea
+            <div>
+                <p>Lorem ipsum dolorconsectetur adipiscing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta t suscipit. </p>
+                <p>Lorem ipsum dolor sit amnsectetur adipiscing elit.</p>
+                <p>Nam suscipit gravmentum.</p>
+                <p>Etiam molestie poro et suscipit. </p>
+                <p class="heading">Sección 1</p>
+                <p>Lorem ipsum dolor sit nsectetudipiscing elit.</p>
+                <p>Nam suscipit gravi fermentum.</p>
+                <p>Etiam molestie porscipit. </p>
+                <p>Lorem ipsum dolor ctetur adipiscing eli t.</p>
+                <p>Nam suscipit gravida fentum.</p>
+                <p>Etiam molestie porta leo et scipit. </p>
+                <p>Lorem ipsum dolor sit amet,sectetur adipis cing elit.</p>
+                <p>Nam suscipit gravida fetum.</p>
+                <p>Etiam molestie porta leo cipit. </p>
+                <p>Lorem ipsum dolor sit ametctetur adipiscilit.</p>
+                <p>Nam suscipit gravida tum.</p>
+                <p>Etiam molestie porta leocipit. </p>
+                <p>Lorem ipsum dolor sitctetur adipisciit.</p>
+                <p>Nam suscipit gravidantum.</p>
+                <p>Etiam molestie porta leipit. </p>
+                <p>Lorem ipsum dolor sionsectetur adipisciit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. piscing el</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adiit.</p>
+                <p>Nam suscipit  graviravida  fermentum.</p>
+                <p>Etiam molestie porteo et suscip it. </p>
+                <p>Lorem ipsum dolor sit amet, conse ctetur adiit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit ametetur adipiscing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, cons ectet dipiscing .</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, conse ctetur adi piscing elit.</p>
+                <p>Nam suscipit gravida  fer mentum fermen tum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipi scing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolorconsectetur adipiscing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p class="heading">Sección 2</p>
+                <p>Etiam molestie porta t suscipit. </p>
+                <p>Lorem ipsum dolor sit amnsectetur adipiscing elit.</p>
+                <p>Nam suscipit gravmentum.</p>
+                <p>Etiam molestie poro et suscipit. </p>
+                <p>Lorem ipsum dolor sit nsectetudipiscing elit.</p>
+                <p>Nam suscipit gravi fermentum.</p>
+                <p>Etiam molestie porscipit. </p>
+                <p>Lorem ipsum dolor ctetur adipiscing eli t.</p>
+                <p>Nam suscipit gravida fentum.</p>
+                <p>Etiam molestie porta leo et scipit. </p>
+                <p>Lorem ipsum dolor sit amet,sectetur adipis cing elit.</p>
+                <p>Nam suscipit gravida fetum.</p>
+                <p>Etiam molestie porta leo cipit. </p>
+                <p>Lorem ipsum dolor sit ametctetur adipiscilit.</p>
+                <p>Nam suscipit gravida tum.</p>
+                <p>Etiam molestie porta leocipit. </p>
+                <p>Lorem ipsum dolor sitctetur adipisciit.</p>
+                <p>Nam suscipit gravidantum.</p>
+                <p>Etiam molestie porta leipit. </p>
+                <p>Lorem ipsum dolor sionsectetur adipisciit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. piscing el</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adiit.</p>
+                <p>Nam suscipit  graviravida  fermentum.</p>
+                <p>Etiam molestie porteo et suscip it. </p>
+                <p>Lorem ipsum dolor sit amet, conse ctetur adiit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit ametetur adipiscing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, cons ectet dipiscing .</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, conse ctetur adi piscing elit.</p>
+                <p>Nam suscipit gravida  fer mentum fermen tum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipi scing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolorconsectetur adipiscing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta t suscipit. </p>
+                <p>Lorem ipsum dolor sit amnsectetur adipiscing elit.</p>
+                <p>Nam suscipit gravmentum.</p>
+                <p>Etiam molestie poro et suscipit. </p>
+                <p>Lorem ipsum dolor sit nsectetudipiscing elit.</p>
+                <p>Nam suscipit gravi fermentum.</p>
+                <p>Etiam molestie porscipit. </p>
+                <p>Lorem ipsum dolor ctetur adipiscing eli t.</p>
+                <p>Nam suscipit gravida fentum.</p>
+                <p>Etiam molestie porta leo et scipit. </p>
+                <p>Lorem ipsum dolor sit amet,sectetur adipis cing elit.</p>
+                <p>Nam suscipit gravida fetum.</p>
+                <p>Etiam molestie porta leo cipit. </p>
+                <p>Lorem ipsum dolor sit ametctetur adipiscilit.</p>
+                <p>Nam suscipit gravida tum.</p>
+                <p class="heading">Sección 3</p>
+                <p>Etiam molestie porta leocipit. </p>
+                <p>Lorem ipsum dolor sitctetur adipisciit.</p>
+                <p>Nam suscipit gravidantum.</p>
+                <p>Etiam molestie porta leipit. </p>
+                <p>Lorem ipsum dolor sionsectetur adipisciit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p class="heading">Sección 4</p>
+                <p>Etiam molestie porta leo et suscipit. piscing el</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adiit.</p>
+                <p>Nam suscipit  graviravida  fermentum.</p>
+                <p>Etiam molestie porteo et suscip it. </p>
+                <p>Lorem ipsum dolor sit amet, conse ctetur adiit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit ametetur adipiscing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, cons ectet dipiscing .</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, conse ctetur adi piscing elit.</p>
+                <p>Nam suscipit gravida  fer mentum fermen tum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipi scing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p class="heading">Sección 5</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+               <p>Lorem ipsum dolorconsectetur adipiscing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta t suscipit. </p>
+                <p>Lorem ipsum dolor sit amnsectetur adipiscing elit.</p>
+                <p>Nam suscipit gravmentum.</p>
+                <p>Etiam molestie poro et suscipit. </p>
+                <p>Lorem ipsum dolor sit nsectetudipiscing elit.</p>
+                <p>Nam suscipit gravi fermentum.</p>
+                <p>Etiam molestie porscipit. </p>
+                <p>Lorem ipsum dolor ctetur adipiscing eli t.</p>
+                <p>Nam suscipit gravida fentum.</p>
+                <p>Etiam molestie porta leo et scipit. </p>
+                <p>Lorem ipsum dolor sit amet,sectetur adipis cing elit.</p>
+                <p>Nam suscipit gravida fetum.</p>
+                <p>Etiam molestie porta leo cipit. </p>
+                <p>Lorem ipsum dolor sit ametctetur adipiscilit.</p>
+                <p>Nam suscipit gravida tum.</p>
+                <p>Etiam molestie porta leocipit. </p>
+                <p class="heading">Sección 6</p>
+                <p>Lorem ipsum dolor sitctetur adipisciit.</p>
+                <p>Nam suscipit gravidantum.</p>
+                <p>Etiam molestie porta leipit. </p>
+                <p>Lorem ipsum dolor sionsectetur adipisciit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. piscing el</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adiit.</p>
+                <p>Nam suscipit  graviravida  fermentum.</p>
+                <p>Etiam molestie porteo et suscip it. </p>
+                <p>Lorem ipsum dolor sit amet, conse ctetur adiit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit ametetur adipiscing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, cons ectet dipiscing .</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, conse ctetur adi piscing elit.</p>
+                <p>Nam suscipit gravida  fer mentum fermen tum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipi scing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolorconsectetur adipiscing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta t suscipit. </p>
+                <p>Lorem ipsum dolor sit amnsectetur adipiscing elit.</p>
+                <p>Nam suscipit gravmentum.</p>
+                <p>Etiam molestie poro et suscipit. </p>
+                <p>Lorem ipsum dolor sit nsectetudipiscing elit.</p>
+                <p>Nam suscipit gravi fermentum.</p>
+                <p>Etiam molestie porscipit. </p>
+                <p>Lorem ipsum dolor ctetur adipiscing eli t.</p>
+                <p>Nam suscipit gravida fentum.</p>
+                <p>Etiam molestie porta leo et scipit. </p>
+                <p>Lorem ipsum dolor sit amet,sectetur adipis cing elit.</p>
+                <p>Nam suscipit gravida fetum.</p>
+                <p>Etiam molestie porta leo cipit. </p>
+                <p>Lorem ipsum dolor sit ametctetur adipiscilit.</p>
+                <p>Nam suscipit gravida tum.</p>
+                <p class="heading">Sección 7</p>
+                <p>Etiam molestie porta leocipit. </p>
+                <p>Lorem ipsum dolor sitctetur adipisciit.</p>
+                <p>Nam suscipit gravidantum.</p>
+                <p>Etiam molestie porta leipit. </p>
+                <p>Lorem ipsum dolor sionsectetur adipisciit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. piscing el</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adiit.</p>
+                <p>Nam suscipit  graviravida  fermentum.</p>
+                <p>Etiam molestie porteo et suscip it. </p>
+                <p>Lorem ipsum dolor sit amet, conse ctetur adiit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit ametetur adipiscing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, cons ectet dipiscing .</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, conse ctetur adi piscing elit.</p>
+                <p>Nam suscipit gravida  fer mentum fermen tum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipi scing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Nam suscipit gravida fermentum.</p>
+                <p>Etiam molestie porta leo et suscipit. </p>
+              
+              </div>
+      </textarea
         >
       </article>
 
-      <article
+      <header class="slide back-cover">
+        <div>
+          <h1>position: sticky</h1>
+
+          <p class="compatibility delayed">+85%</p>
+        </div>
+      </header>
+    </section>
+
+    <section>
+        <header class="slide">
+            <div>
+              <h1>overscroll-behavior</h1>
+            </div>
+          </header>
+        
+
+        <article class="slide">
+            <pre class="language-css"><code>overscroll-behavior: none</code></pre>
+        </article>
+
+        <header class="slide back-cover">
+            <div>
+              <h1>overscroll-behavior</h1>
+    
+              <p class="compatibility delayed">+75%</p>
+            </div>
+          </header>
+        </section>
+
+        <section>
+          <header class="slide">
+            <div>
+              <h1>Feature Queries</h1>
+            </div>
+          </header>
+
+          <article class="slide">
+              <pre class="language-css"><code>@supports (display: grid) {
+  /* Grid compatible */
+}</code></pre>
+          </article>
+        </section>
+
+
+    <section>
+        <header class="slide">
+            <div>
+              <h1><span
+                style="font-size:.5em; text-transform: uppercase; opacity: .7; font-family: 'Open Sans', sans-serif"
+                >¡Bonus!</span
+              ><br />Houdini</h1>
+            </div>
+          </header>
+
+          <article class="slide">
+              <h1>Custom Properties</h1>
+              <br />
+              <pre class="language-js"><code>CSS.registerProperty({
+  name: '--foo',
+  syntax: '<color>',
+  inherits: false,
+  initialValue: 'black',
+});</code></pre>
+            </article>
+
+            <article class="slide">
+                <h1>Paint API</h1>
+                <div style="font-size: 1.3rem">
+                <pre class="language-js"><code>// JS
+class MyPainter {
+  paint(ctx, geometry, properties) {
+    // ...
+  }
+}
+
+registerPaint('myPainter', MyPainter);         </code></pre>
+
+                <pre class="language-html"><code>&lt;!-- HTML --&gt;
+&lt;script&gt;
+  CSS.paintWorklet.addModule('myPainter.js');
+&lt;/script&gt;</code></pre>
+                <pre class="language-css"><code>/* CSS */
+div {
+  background-image: paint(myPainter);
+}</code></pre></div>
+              </article>
+
+              <article
         class="slide iframe dont-resize onscreen-nav mv-target-within"
         data-index="6"
       >
         <iframe
-          data-src="https://bennettfeely.com/clippy/"
-          src="https://bennettfeely.com/clippy/"
+          data-src="http://houdini.glitch.me/"
+          src="http://houdini.glitch.me/"
         ></iframe>
         <h1>
-          <a href="https://bennettfeely.com/clippy/" target="_blank"
-            >bennettfeely.com/clippy/</a
+          <a href="http://houdini.glitch.me/" target="_blank"
+            >houdini.glitch.me/</a
           >
         </h1>
       </article>
 
-      <header class="slide back-cover">
-        <div>
-          <h1>Clip-path</h1>
-
-          <p class="compatibility delayed">+90%</p>
-        </div>
-      </header>
-    </section>
-
-		-->
-    <!--
-<section>
-	<header class="slide">
-		<h1>Custom Selectors & Media Queries</h1>
-	</header>
-
-	<article class="slide">
-
-		<pre class="language-css"><code>@custom-media --narrow-window (max-width: 30em);
-
-@media (--narrow-window) {}
-
-@custom-selector :--heading h1, h2, h3, h4, h5, h6;
-
-article :--heading + p {}</code></pre>
-
-	</article>
-
-	<header class="slide back-cover">
-		<h1>Custom Selectors & Media Queries</h1>
-		
-		<p class="compatibility delayed">90%</p>
-	</header>
-</section>
--->
-    <section>
-      <header class="slide">
-        <div>
-          <h1>Filter</h1>
-        </div>
-      </header>
-
-      <article class="slide">
-        <pre class="language-css"><code>blur()
-brightness()
-contrast()
-drop-shadow()
-grayscale()
-hue-rotate()
-invert()
-opacity()
-saturate()
-sepia()</code></pre>
-      </article>
-
-      <article class="demo slide" id="demo-filter">
-        <textarea class="language-css">
-			img {
-				width: 25rem;
-				height: 25rem;
-			}
-
-		</textarea
-        >
-        <textarea class="language-html">
-			<img src="img/emoji.jpg">
-		</textarea
-        >
-      </article>
-
-      <article class="demo slide" id="demo-filter2">
-        <textarea class="language-css">
-			h1 {
-				
-			}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-			h1 {
-				font-size: 5rem;
-			}
-		</textarea
-        >
-        <textarea class="language-html">
-			<h1>Lorem Ipsum</h1>
-		</textarea
-        >
-      </article>
-
-      <header class="slide back-cover">
-        <div>
-          <h1>Filter</h1>
-
-          <p class="compatibility delayed">+90%</p>
-        </div>
-      </header>
-    </section>
-
-    <section>
-      <article class="slide">
-        <h1>
-          <span
-            style="font-size:.5em; text-transform: uppercase; opacity: .7; font-family: 'Open Sans', sans-serif"
-            >¡Bonus!</span
-          ><br />Feature Queries
-        </h1>
-        <br />
-        <pre class="language-css"><code>@supports (display: grid) {
-  /* Estilos para navegadores que soporten grid */
-}</code></pre>
-      </article>
     </section>
 
     <section>
@@ -868,6 +1029,9 @@ sepia()</code></pre>
         <p class="link">
           <a href="cssdb.org">What’s next for CSS?</a><span>cssdb.org</span>
         </p>
+        <p class="link">
+            <a href="https://2019.stateofcss.com/">State of CSS</a><span>2019.stateofcss.com/</span>
+          </p>
       </article>
     </section>
 
