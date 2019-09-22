@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
-    <title>Inspire.js: A brief introduction</title>
+    <title>Lo nuevo de CSS</title>
 
     <link href="inspire.css" rel="stylesheet" />
     <link href="theme.css" rel="stylesheet" />
@@ -32,9 +32,12 @@
         <div>
           <img src="img/sonia-ruiz.jpg" />
           <div>
-            <h2>Sonia Ruiz</h2>
-            <p>Frontend Developer</p>
-            <p>@Yune__vk</p>
+            <h2 class="with-bar">Sonia Ruiz</h2>
+            <p>👩🏻‍💻 Frontend Developer en <i>Secuoyas</i></p>
+            <p>
+              <img src="img/twitter.png" class="logo" />@Yune__vk
+              <img src="img/github.svg" class="logo" />YuneVK
+            </p>
           </div>
         </div>
       </header>
@@ -93,7 +96,7 @@
     </section>
 
     <section>
-      <header class="slide">
+      <header class="slide back-cover">
         <div>
           <h1>Lo nuevo de CSS</h1>
         </div>
@@ -107,25 +110,14 @@
         </div>
       </header>
 
-      <article class="slide" id="demo-variable">
-        <pre class="language-css"><code>:root { /* root: {} = html {} */
-	--primary-color: teal;
-	--secondary-color: blue;
-}
-
-h1 {
-	color: var(--primary-color);
-}
-
-button {
-	background-color: var(--primary-color);
-}</code></pre>
+      <article class="slide  white" id="demo-variable">
+        <img src="img/custom-properties.svg" class="code-img" />
       </article>
 
       <header class="slide back-cover">
         <div>
           <h1>Custom Properties</h1>
-          <p class="compatibility delayed">+90%</p>
+          <p class="compatibility delayed good">👍 +90%</p>
         </div>
       </header>
     </section>
@@ -172,10 +164,14 @@ button {
       <header class="slide back-cover">
         <div>
           <h1>calc()</h1>
-          <p class="compatibility delayed">+95%</p>
+          <p class="compatibility delayed good">👍 +95%</p>
           <p class="bonus delayed">
             <span>¡Bonus!</span> <code>max()</code>, <code>min()</code>,
-            <code>clamp()</code><br /><span style="font-weight: 100" class="delayed">y funciones trigonométricas</span>
+            <code>clamp()</code><br /><span
+              style="font-weight: 100"
+              class="delayed"
+              >y funciones trigonométricas</span
+            >
           </p>
         </div>
         <!-- <p class="compatibility delayed">90%</p> -->
@@ -223,7 +219,7 @@ button {
       <header class="slide back-cover">
         <div>
           <h1>Conic Gradients</h1>
-          <p class="compatibility delayed">+65%</p>
+          <p class="compatibility delayed regular">🤷🏻‍ +70%</p>
         </div>
       </header>
     </section>
@@ -235,40 +231,25 @@ button {
         </div>
       </header>
 
-      <article class="slide">
+      <article class="slide subsection">
         <h1>Detectar el tipo de cursor</h1>
 
-        <pre class="language-css"><code>@media (pointer:coarse) {
-	/* Estilos para pantallas táctiles */
-}
-
-@media (hover) {
-	/* Estilos para pantallas que soporten
-		el efecto hover */
-}</code></pre>
-        <span><p class="compatibility delayed">+90%</p></span>
+        <img src="img/media-pointer.svg" class="code-img" />
+        <span><p class="compatibility delayed good">🤷🏻‍ +85%</p></span>
       </article>
 
-      <article class="slide">
+      <article class="slide subsection">
         <h1>Nueva sintaxis</h1>
 
-        <pre class="language-css"><code>/* Sintaxis actual */
-@media (min-width: 40em) and (max-width: 59em) {}
-
-/* Nueva sintaxis */
-@media (40em <= width <= 59em ) {}</code></pre>
-        <span><p class="compatibility delayed">0%</p></span>
+        <img src="img/nueva-sintaxis.svg" class="code-img" />
+        <span><p class="compatibility delayed bad">👎 0%</p></span>
       </article>
 
-      <article class="slide">
+      <article class="slide subsection">
         <h1>Custom Media Queries</h1>
 
-        <pre
-          class="language-css"
-        ><code>@custom-media --mobile (max-width: 30em);
-
-@media (--mobile) {}</code></pre>
-        <span><p class="compatibility delayed">0%</p></span>
+        <img src="img/custom-media.svg" class="code-img" />
+        <span><p class="compatibility delayed bad">👎 0%</p></span>
       </article>
     </section>
 
@@ -279,20 +260,15 @@ button {
         </div>
       </header>
 
-      <article class="slide" id="demo-custom-selector">
-        <pre
-          class="language-css"
-        ><code>@custom-selector :--heading h1, h2, h3, h4, h5, h6;
-
-:--heading + p {}</code></pre>
+      <article class="slide subsection" id="demo-custom-selector">
+        <img src="img/custom-selector.svg" class="code-img" />
       </article>
 
       <header class="slide back-cover">
         <div>
           <h1>Custom Selectors</h1>
-          <p class="compatibility delayed">0%</p>
+          <p class="compatibility delayed bad">👎 0%</p>
         </div>
-        <!-- <p class="compatibility delayed">90%</p> -->
       </header>
     </section>
 
@@ -517,7 +493,7 @@ button {
         <div>
           <h1>Scroll Snap</h1>
 
-          <p class="compatibility delayed">+80%</p>
+          <p class="compatibility delayed regular">🤷🏻‍ +85%</p>
         </div>
       </header>
     </section>
@@ -528,28 +504,25 @@ button {
         </div>
       </header>
 
-      <article class="slide">
+      <article class="slide subsection">
         <h1>:has()</h1>
         <br />
-        <pre class="language-css"><code>a:has(> img)</code></pre>
-        <span><p class="compatibility delayed">0%</p></span>
+        <img src="img/has.svg" class="code-img" />
+        <span><p class="compatibility delayed bad">👎 0%</p></span>
       </article>
 
-      <article class="slide">
+      <article class="slide subsection">
         <h1>:is()</h1>
 
-        <pre class="language-css"><code>:is(header, main, footer) p {}
-
-/* Es equivalente a */
-header p, main p, footer p {}</code></pre>
-        <span><p class="compatibility delayed">"90%"</p></span>
+        <img src="img/is.svg" class="code-img" />
+        <span><p class="compatibility delayed bad">👎 "90%"</p></span>
       </article>
 
-      <article class="slide">
+      <article class="slide subsection">
         <h1>:not()</h1>
         <br />
-        <pre class="language-css"><code>li:not(.moreinfo) { ... }</code></pre>
-        <span><p class="compatibility delayed">+90%</p></span>
+        <img src="img/not.svg" class="code-img" />
+        <span><p class="compatibility delayed good">👍 +90%</p></span>
       </article>
     </section>
     <section>
@@ -618,7 +591,7 @@ header p, main p, footer p {}</code></pre>
         <div>
           <h1>Shapes</h1>
 
-          <p class="compatibility delayed">+85%</p>
+          <p class="compatibility delayed regular">🤷🏻‍ +85%</p>
         </div>
       </header>
     </section>
@@ -914,91 +887,169 @@ header p, main p, footer p {}</code></pre>
         <div>
           <h1>position: sticky</h1>
 
-          <p class="compatibility delayed">+85%</p>
+          <p class="compatibility delayed regular">🤷🏻‍ +85%</p>
         </div>
       </header>
     </section>
 
     <section>
-        <header class="slide">
-            <div>
-              <h1>overscroll-behavior</h1>
-            </div>
-          </header>
-        
+      <header class="slide">
+        <div>
+          <h1>overscroll-behavior</h1>
+        </div>
+      </header>
 
-        <article class="slide">
-            <pre class="language-css"><code>overscroll-behavior: none</code></pre>
-        </article>
+      <article class="slide subsection">
+        <img src="img/overscroll.svg" class="code-img" />
+      </article>
 
-        <header class="slide back-cover">
-            <div>
-              <h1>overscroll-behavior</h1>
-    
-              <p class="compatibility delayed">+75%</p>
-            </div>
-          </header>
-        </section>
+      <header class="slide back-cover">
+        <div>
+          <h1>overscroll-behavior</h1>
 
-        <section>
-          <header class="slide">
-            <div>
-              <h1>Feature Queries</h1>
-            </div>
-          </header>
-
-          <article class="slide">
-              <pre class="language-css"><code>@supports (display: grid) {
-  /* Grid es compatible */
-}</code></pre>
-          </article>
-        </section>
-
+          <p class="compatibility delayed regular">🤷🏻‍ +75%</p>
+        </div>
+      </header>
+    </section>
 
     <section>
-        <header class="slide">
-            <div>
-              <h1><span
-                style="font-size:.5em; text-transform: uppercase; opacity: .7; font-family: 'Open Sans', sans-serif"
-                >¡Bonus!</span
-              ><br />Houdini</h1>
-            </div>
-          </header>
+      <header class="slide">
+        <div>
+          <h1>Fuentes variables</h1>
+        </div>
+      </header>
 
-          <article class="slide">
-              <h1>Custom Properties</h1>
-              <br />
-              <pre class="language-js"><code>CSS.registerProperty({
-  name: '--foo',
-  syntax: '<color>',
-  inherits: false,
-  initialValue: 'black',
-});</code></pre>
-            </article>
+      <article class="slide subsection" style="background: white;">
+        <img src="img/variable-font.gif" class="code-img" />
+        <p>
+          <a href="https://v-fonts.com" target="_blank" style="color: #212121"
+            >👉 v-fonts.com</a
+          >
+        </p>
+      </article>
 
-            <article class="slide">
-                <h1>Paint API</h1>
-                <div style="font-size: 1.3rem">
-                <pre class="language-js"><code>// JS
-class MyPainter {
-  paint(ctx, geometry, properties) {
-    // ...
-  }
-}
+      <article class="demo slide" id="demo-variable-fonts">
+        <textarea class="language-css">
+  
+  
+              @font-face {
+                src: url('/fonts/BrenoGX.woff2');
+                font-family:'Breno';
+                font-style: normal;
+              }
 
-registerPaint('myPainter', MyPainter);         </code></pre>
+              p {
+                font-family:'Breno';
+                font-variation-settings: 
+                  "wght" 1, 
+                  "wdth" 1, 
+                  "ital" 1;
+              }
 
-                <pre class="language-html"><code>&lt;!-- HTML --&gt;
-&lt;script&gt;
-  CSS.paintWorklet.addModule('myPainter.js');
-&lt;/script&gt;</code></pre>
-                <pre class="language-css"><code>/* CSS */
-div {
-  background-image: paint(myPainter);
-}</code></pre></div>
-              </article>
 
-              <article
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              p {
+                font-size: 5rem;
+                line-height: 1em;
+              }
+
+
+        </textarea>
+        <textarea class="language-html">
+              <div>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+              </div>
+        </textarea>
+      </article>
+
+      <article
+        class="slide iframe dont-resize onscreen-nav mv-target-within"
+        data-index="6"
+      >
+        <iframe
+          data-src="https://www.axis-praxis.org/specimens/zycon"
+          src="https://www.axis-praxis.org/specimens/zycon"
+        ></iframe>
+        <h1>
+          <a href="https://www.axis-praxis.org/specimens/zycon" target="_blank"
+            >axis-praxis.org/specimens/zycon</a
+          >
+        </h1>
+      </article>
+
+      <header class="slide back-cover">
+        <div>
+          <h1>Fuentes variables</h1>
+
+          <p class="compatibility delayed regular">🤷🏻‍ +85%</p>
+        </div>
+      </header>
+    </section>
+
+    <section>
+      <header class="slide">
+        <div>
+          <h1>Feature Queries</h1>
+        </div>
+      </header>
+
+      <article class="slide subsection">
+        <img src="img/supports.svg" class="code-img" />
+      </article>
+
+      <header class="slide back-cover">
+        <div>
+          <h1>Feature Queries</h1>
+
+          <p class="compatibility delayed good">👍 +95%</p>
+        </div>
+      </header>
+    </section>
+
+    <section>
+      <header class="slide">
+        <div>
+          <h1>
+            <span
+              style="display: block; font-size:.4em; text-transform: uppercase; opacity: .7; font-family: 'Open Sans', sans-serif"
+              >¡Bonus!</span
+            >Houdini
+          </h1>
+        </div>
+      </header>
+
+      <article class="slide subsection">
+        <h1>Custom Properties</h1>
+        <br />
+        <img src="img/houdini-1.svg" class="code-img" />
+      </article>
+
+      <article class="slide subsection">
+        <h1>Paint API</h1>
+        <div style="font-size: 1.3rem">
+          <img
+            src="img/houdini-paint.png"
+            class="code-img"
+            style="max-height: 90vh; margin-top: 7rem;"
+          />
+        </div>
+      </article>
+
+      <article
         class="slide iframe dont-resize onscreen-nav mv-target-within"
         data-index="6"
       >
@@ -1012,33 +1063,34 @@ div {
           >
         </h1>
       </article>
-
     </section>
 
     <section>
-      <article class="slide">
+      <article class="slide subsection">
         <h1>¡Conoce más!</h1>
         <p class="link">
-          <a href="">W3C CSS Current Work</a>
+          <a href="">👉 W3C CSS Current Work</a>
           <span>www.w3.org/Style/CSS/current-work</span>
         </p>
         <p class="link">
-          <a href="cssdb.org">What’s next for CSS?</a><span>cssdb.org</span>
+          <a href="cssdb.org">👉 What’s next for CSS?</a><span>cssdb.org</span>
         </p>
         <p class="link">
-            <a href="https://2019.stateofcss.com/">State of CSS</a><span>2019.stateofcss.com/</span>
-          </p>
+          <a href="https://2019.stateofcss.com">👉 State of CSS</a
+          ><span>2019.stateofcss.com</span>
+        </p>
       </article>
     </section>
 
     <section>
-      <header class="slide">
+      <header class="slide bye">
         <div>
-          <h1 class="thank">¡Muchas gracias!</h1>
+          <h1 class="thank"><span>👋</span>¡Muchas gracias!</h1>
 
-          <div class="rrss">
-            <p>@Yune__vk</p>
-          </div>
+          <p>
+            <img src="img/twitter.png" class="logo" />@Yune__vk
+            <img src="img/github.svg" class="logo" />YuneVK
+          </p>
         </div>
       </header>
     </section>

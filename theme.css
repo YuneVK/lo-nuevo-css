@@ -1,6 +1,12 @@
 @import url("extras.css");
 
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,600|Raleway:800");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:100,300,600|Raleway:800");
+
+@font-face {
+  src: url("/fonts/BrenoGX.woff2");
+  font-family: "Breno";
+  font-style: normal;
+}
 
 :root {
   --font-mono: Consolas, Monaco, "Andale Mono", monospace;
@@ -32,7 +38,7 @@
 body {
   font: 300 100%/1.5 var(--font-body);
   font-family: var(--font-body);
-  font-weight: 300;
+  font-weight: 100;
   --darker: rgba(0, 0, 0, 0.12);
   background: #212121;
   /* background: linear-gradient(45deg, var(--darker) 25%, transparent 25%, transparent 75%, var(--darker) 75%), */
@@ -504,4 +510,301 @@ p.bonus span {
   -moz-animation: Gradient 4s ease infinite;
   animation: Gradient 4s ease infinite;
   -webkit-background-clip: text;
+}
+
+/* CODEMOTION SLIDES */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  letter-spacing: -0.03em !important;
+}
+
+section > header.slide {
+  background: #212121;
+}
+
+#sonia-ruiz {
+  background: #fafafa;
+}
+
+#sonia-ruiz > div {
+  display: flex !important;
+  align-items: flex-start;
+  color: #212121 !important;
+  background: #fafafa;
+  margin-left: 5rem;
+}
+
+#sonia-ruiz h2 {
+  margin-bottom: 1rem;
+  color: #212121 !important;
+  position: relative;
+}
+
+h2.with-bar:after {
+  content: "";
+  position: absolute;
+  width: 60vw;
+  height: 0.5em;
+  top: 0.45em;
+  bottom: 0;
+  margin-left: 0.2em;
+  background: linear-gradient(318deg, #49a09d, #5f2c82, #49a09d, #5f2c82);
+  /* background-image: url('./img/background.gif'); */
+  background-size: 800% 800%;
+  -webkit-animation: Gradient 6s ease infinite;
+  -moz-animation: Gradient 6s ease infinite;
+  animation: Gradient 6s ease infinite;
+}
+
+#sonia-ruiz p {
+  font-size: 2rem !important;
+  margin-bottom: 2rem !important;
+  margin-top: 0 !important;
+  font-weight: 100;
+}
+
+#sonia-ruiz p:last-child {
+  margin-bottom: 0 !important;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 2%;
+  }
+  50% {
+    background-position: 100% 99%;
+  }
+  100% {
+    background-position: 0% 2%;
+  }
+}
+
+.card img.logo {
+  height: 1em;
+  border-radius: initial;
+  margin-right: 0.5rem;
+}
+
+.card p:lasth-child {
+  display: flex;
+  align-items: center;
+}
+
+.card img.logo:nth-child(2) {
+  margin-left: 2.5rem;
+}
+
+section > header.slide > div {
+  width: 100vw;
+}
+
+header.slide > div h1 {
+  text-align: left;
+  font-size: 7rem;
+  position: relative;
+  width: 100%;
+  padding-left: 10rem;
+  font-size: 8rem;
+}
+
+header.slide > div h1:before {
+  content: "";
+  position: absolute;
+  width: 60vw;
+  height: 0.4em;
+  top: -0.8em;
+  left: -7vmin;
+  bottom: 0;
+  background: linear-gradient(318deg, #49a09d, #5f2c82, #49a09d, #5f2c82);
+  background-size: 800% 800%;
+  -webkit-animation: Gradient 6s ease infinite;
+  -moz-animation: Gradient 6s ease infinite;
+  animation: Gradient 6s ease infinite;
+}
+
+header.slide.back-cover {
+  background: #fafafa;
+}
+
+header.slide.back-cover > div {
+  background: #fafafa;
+}
+
+header.slide.back-cover h1 {
+  color: #212121;
+}
+
+.compatibility {
+  color: #212121;
+  font-family: "Raleway";
+  font-size: 8rem !important;
+  margin-bottom: -2rem;
+}
+
+.compatibility.good {
+  color: #2e7d32;
+}
+
+.compatibility.regular {
+  color: #f57c00;
+}
+
+.compatibility.bad {
+  color: #c62828;
+}
+
+p.bonus {
+  color: #212121;
+  width: 100%;
+  padding-left: 10rem;
+  text-align: left;
+}
+
+.iframe.slide h1 {
+  background: rgba(1, 1, 1, 0.7) !important;
+}
+
+.slide.subsection code {
+  color: #a626a4;
+}
+
+.slide.subsection .token.selector,
+.slide.subsection .token.attr-name,
+.slide.subsection .token.string,
+.slide.subsection .token.char,
+.slide.subsection .token.builtin {
+  color: #e06c75;
+}
+
+.slide.subsection .token.comment,
+.slide.subsection .token.prolog,
+.slide.subsection .token.doctype,
+.slide.subsection .token.cdata {
+  color: rgba(1, 1, 1, 0.4);
+}
+
+.slide.subsection .token.punctuation {
+  color: rgba(1, 1, 1, 0.7);
+}
+
+.slide.subsection .token.property,
+.slide.subsection .token.tag,
+.slide.subsection .token.boolean,
+.slide.subsection .token.number,
+.slide.subsection .token.constant,
+.slide.subsection .token.symbol {
+  color: #e06c75;
+}
+
+.slide.subsection {
+  background: #fafafa;
+}
+
+.slide.subsection h1 {
+  position: absolute;
+  top: 1.5rem;
+  text-align: left !important;
+  width: fit-content;
+  padding-left: 8rem;
+  font-size: 5rem !important;
+  left: 0;
+  color: #212121;
+}
+
+.slide.subsection h1:after {
+  content: "";
+  position: absolute;
+  width: 80vw;
+  height: 0.5em;
+  top: 0.4em;
+  left: calc(100% + 2rem);
+  bottom: 0;
+  background: linear-gradient(318deg, #49a09d, #5f2c82, #49a09d, #5f2c82);
+  background-size: 800% 800%;
+  -webkit-animation: Gradient 6s ease infinite;
+  -moz-animation: Gradient 6s ease infinite;
+  animation: Gradient 6s ease infinite;
+}
+
+p.link {
+  color: #212121;
+  width: 100%;
+  text-align: left;
+  padding-left: 8rem;
+  margin: 0;
+}
+
+p.link a {
+  font-size: 3rem !important;
+}
+
+p.link a:first-of-type {
+  margin-top: 3rem;
+}
+
+p.link span {
+  margin-bottom: 1rem;
+  display: block;
+  padding-left: 4rem;
+  margin-top: 1rem;
+  font-size: 1.7rem !important;
+  opacity: 0.8;
+}
+
+.bye,
+.bye > div {
+  background: #fafafa !important;
+  align-items: flex-start !important;
+}
+
+.bye h1 {
+  color: #212121;
+  background: none;
+  font-size: 7rem !important;
+  position: relative;
+  width: fit-content !important;
+  padding-left: 6rem !important;
+  margin-top: -6rem;
+}
+
+.bye h1 span {
+  font-size: 9rem !important;
+  display: block;
+}
+
+header.slide.bye > div h1:before {
+  content: "";
+  position: absolute;
+  width: 60vw;
+  height: 0.5em;
+  right: 0;
+  bottom: 0.25em;
+  top: calc(100% - 0.75em);
+  left: calc(100% + 2rem);
+}
+
+header.slide.bye p {
+  color: #212121 !important;
+  padding-left: 6rem !important;
+  position: absolute;
+  bottom: 0rem;
+  right: 5rem;
+}
+
+header.slide.bye img.logo {
+  height: 1em;
+  border-radius: initial;
+  margin-right: 0.5rem;
+}
+
+header.slide.bye p:lasth-child {
+  display: flex;
+  align-items: center;
+}
+
+header.slide.bye img.logo:nth-child(2) {
+  margin-left: 2.5rem;
 }
