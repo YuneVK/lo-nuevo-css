@@ -103,12 +103,12 @@
     <section>
       <header class="slide">
         <div>
-          <h1>Variables</h1>
+          <h1>Custom Properties</h1>
         </div>
       </header>
 
       <article class="slide" id="demo-variable">
-        <pre class="language-css"><code>:root { /* Es igual a html {...} */
+        <pre class="language-css"><code>:root { /* root: {} = html {} */
 	--primary-color: teal;
 	--secondary-color: blue;
 }
@@ -124,7 +124,7 @@ button {
 
       <header class="slide back-cover">
         <div>
-          <h1>Variables</h1>
+          <h1>Custom Properties</h1>
           <p class="compatibility delayed">+90%</p>
         </div>
       </header>
@@ -175,7 +175,7 @@ button {
           <p class="compatibility delayed">+95%</p>
           <p class="bonus delayed">
             <span>¡Bonus!</span> <code>max()</code>, <code>min()</code>,
-            <code>clamp()</code><br />y funciones trigonométricas
+            <code>clamp()</code><br /><span style="font-weight: 100" class="delayed">y funciones trigonométricas</span>
           </p>
         </div>
         <!-- <p class="compatibility delayed">90%</p> -->
@@ -252,15 +252,11 @@ button {
       <article class="slide">
         <h1>Nueva sintaxis</h1>
 
-        <pre class="language-css"><code>/* ANIGUA SINTAXIS */
-@media (min-width: 40em) and (max-width: 59em) {
-	/* Tamaños de pantalla entre  40em y 59em */
-}
+        <pre class="language-css"><code>/* Sintaxis actual */
+@media (min-width: 40em) and (max-width: 59em) {}
 
-/* NUEVA SINTAXIS */
-@media (40em <= width <= 59em ) {
-	/* Tamaños de pantalla entre 40em y 59em */
-}</code></pre>
+/* Nueva sintaxis */
+@media (40em <= width <= 59em ) {}</code></pre>
         <span><p class="compatibility delayed">0%</p></span>
       </article>
 
@@ -542,14 +538,10 @@ button {
       <article class="slide">
         <h1>:is()</h1>
 
-        <pre class="language-css"><code>:is(header, main, footer) p {
-  /* ... */
-}
+        <pre class="language-css"><code>:is(header, main, footer) p {}
 
 /* Es equivalente a */
-header p, main p, footer p {
-  /* ... */
-}</code></pre>
+header p, main p, footer p {}</code></pre>
         <span><p class="compatibility delayed">"90%"</p></span>
       </article>
 
@@ -569,6 +561,8 @@ header p, main p, footer p {
 
       <article class="demo slide" id="demo-clip-path">
         <textarea class="language-css">
+
+
             div::before {
               content: "";
               display: block;
@@ -638,6 +632,8 @@ header p, main p, footer p {
 
       <article class="demo slide" id="demo-sticky">
         <textarea class="language-css">
+
+
             .heading {
 
             }
@@ -953,7 +949,7 @@ header p, main p, footer p {
 
           <article class="slide">
               <pre class="language-css"><code>@supports (display: grid) {
-  /* Grid compatible */
+  /* Grid es compatible */
 }</code></pre>
           </article>
         </section>
@@ -1007,11 +1003,11 @@ div {
         data-index="6"
       >
         <iframe
-          data-src="http://houdini.glitch.me/"
-          src="http://houdini.glitch.me/"
+          data-src="https://houdini.glitch.me/"
+          src="https://houdini.glitch.me/"
         ></iframe>
         <h1>
-          <a href="http://houdini.glitch.me/" target="_blank"
+          <a href="https://houdini.glitch.me/" target="_blank"
             >houdini.glitch.me/</a
           >
         </h1>
